@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./pages/login";
 import SignUp from "./pages/SignUp";
-import Home from "./pages/Home";
+
 
 import QuestionBank from "./pages/QuestionBank";
 import CreateQuiz from "./pages/CreateQuiz";
