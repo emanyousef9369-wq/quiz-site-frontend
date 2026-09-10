@@ -1,0 +1,373 @@
+.question-bank-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f9fc;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.qb-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background: #101d43;
+  color: white;
+  padding: 25px 15px;
+}
+
+.qb-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.qb-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qb-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.qb-nav-item:hover {
+  background: #263b78;
+}
+
+.qb-nav-item.active {
+  background: linear-gradient(90deg, #5534e8, #633eea);
+}
+
+.qb-nav-item.logout {
+  margin-top: 20px;
+}
+
+
+/* Main */
+
+.qb-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.qb-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #17213f;
+}
+
+.qb-header p {
+  margin-top: 8px;
+  color: #737b91;
+}
+
+
+/* Filters */
+
+.qb-filters {
+  margin-top: 35px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.search-box input {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  color: #334155;
+  width: 100%;
+}
+.qb-filters select {
+  height: 42px;
+  padding: 0 15px;
+  border: 1px solid #e1e4eb;
+  border-radius: 7px;
+  background: white;
+  color: #444;
+}
+
+.add-question {
+  height: 42px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 7px;
+  background: #5135e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Table */
+
+.questions-table {
+  margin-top: 25px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr 0.7fr;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #29304a;
+  border-bottom: 1px solid #eee;
+}
+
+.table-row {
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.question-text {
+  color: #222b45;
+  font-weight: 500;
+}
+
+
+/* Difficulty */
+
+.difficulty {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.difficulty.easy {
+  background: #e5f8ec;
+  color: #25a55b;
+}
+
+.difficulty.medium {
+  background: #fff3d8;
+  color: #e79a17;
+}
+
+.difficulty.hard {
+  background: #ffe3e3;
+  color: #e54848;
+}
+
+
+/* Actions */
+
+.actions {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+
+/* Loading / Error */
+
+.table-message {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+.table-message.error {
+  color: red;
+}
+
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.pagination button {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button.current {
+  background: #f0edff;
+  border-color: #5839e8;
+  color: #5839e8;
+  font-weight: bold;
+}
+
+
+
+/* =========================
+   MODAL STYLES
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 24, 39, 0.6);
+  /* backdrop-filter: blur(4px); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-card.small {
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-card h2 {
+  font-size: 22px;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.modal-card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.modal-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.modal-field input,
+.modal-field select {
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modal-field input:focus,
+.modal-field select:focus {
+  border-color: #5735ed;
+  box-shadow: 0 0 0 3px rgba(87, 53, 237, 0.1);
+}
+
+.modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  padding: 10px 18px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5735ed;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #4829d4;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.btn-cancel:hover {
+  background-color: #f3f4f6;
+}

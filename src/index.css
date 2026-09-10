@@ -1,0 +1,307 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #111827;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f6fa;
+}
+
+/* الكارت الأساسي الموحد */
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* يمنع ظهور السكرول نهائياً */
+}
+
+
+/* =========================
+   LEFT SIDE (الصورة)
+========================= */
+
+.login-left {
+  width: 45%;
+  position: relative;
+  background-color: #1a103c; /* لون مطابق لخلفية الصورة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تغطية المساحة بالكامل بدون تشويه */
+  display: block;
+}
+
+
+/* =========================
+   RIGHT SIDE (الفورم)
+========================= */
+
+.login-right {
+  width: 55%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+
+/* =========================
+   ROLE SELECTOR
+========================= */
+
+.role-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.role {
+  height: 50px;
+  border: 1px solid #dfe2eb;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.role:hover {
+  border-color: #5735ed;
+}
+
+.role.active {
+  background-color: #f0edff;
+  border: 2px solid #5735ed;
+  color: #4c2fe0;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #dce0e9;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #5735ed;
+  box-shadow: 0 0 0 3px rgba(87, 53, 237, 0.1);
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.password-header label {
+  margin: 0;
+}
+
+.password-header button {
+  border: none;
+  background-color: transparent;
+  color: #5032db;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 55px;
+}
+
+.show-password {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  width: 45px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4d25ee, #6338ef);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.register-text {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+.register-text a {
+  color: #5032db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .login-page {
+    padding: 15px;
+  }
+
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    width: 100%;
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .login-page {
+    padding: 10px;
+  }
+
+  .login-right {
+    padding: 30px 18px;
+  }
+
+  .welcome h1 {
+    font-size: 25px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 13px;
+  }
+
+  .password-header button {
+    font-size: 12px;
+  }
+}

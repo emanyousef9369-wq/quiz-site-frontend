@@ -1,0 +1,271 @@
+.student-dashboard-page {
+  display: flex;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Sidebar Styling */
+.sd-sidebar {
+  width: 240px;
+  background-color: #1a1b2f;
+  color: #fff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+}
+
+.sd-logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sd-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sd-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #9ca3af;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.sd-nav-item.active, .sd-nav-item:hover {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.sd-nav-item.logout {
+  margin-top: auto;
+}
+
+/* Main Layout */
+.sd-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 32px;
+}
+
+.sd-header h2 {
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.sd-header p {
+  color: #6b7280;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.sd-content-grid {
+  display: flex;
+  gap: 24px;
+}
+
+.sd-left-col {
+  flex: 2;
+}
+
+.sd-right-col {
+  flex: 1;
+}
+
+/* Cards */
+.sd-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.mt-20 { margin-top: 20px; }
+
+.sd-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sd-card-header h3 {
+  font-size: 16px;
+  color: #111827;
+}
+
+.view-all {
+  color: #4f46e5;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Quiz List */
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+}
+
+.quiz-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: #f3f4f6;
+}
+
+.quiz-info h4 {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.quiz-info p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.start-btn {
+  background-color: #eef2ff;
+  color: #4f46e5;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Results List */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.result-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-date {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.green-text { color: #22c55e; }
+.orange-text { color: #f59e0b; }
+.red-text { color: #ef4444; }
+
+/* Progress Circle */
+.text-center { text-align: center; }
+
+.circle-progress {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: conic-gradient(#4f46e5 0% 76%, #e5e7eb 76% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.circle-inner {
+  width: 105px;
+  height: 105px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner .percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.circle-inner .label {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Topic Bars */
+.topic-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.topic-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.bar-bg {
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.green-bg { background-color: #22c55e; }
+.orange-bg { background-color: #f59e0b; }
+.red-bg { background-color: #ef4444; }

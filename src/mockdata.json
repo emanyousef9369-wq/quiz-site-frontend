@@ -1,0 +1,103 @@
+{
+  "users": [
+     {
+      "email": "student@test.com",
+      "password": "123",
+      "role": "student"
+      
+    },
+    {
+      "email": "lecturer@test.com",
+      "password": "123",
+      "role": "lecturer"
+     
+    }
+  ],
+ "questions": [
+    {
+      "_id": "1",
+      "question": "What is React?",
+      "options": [
+        "A JavaScript library for building user interfaces",
+        "A server-side programming language",
+        "A database management system",
+        "A CSS framework"
+      ],
+      "correctAnswer": "A JavaScript library for building user interfaces",
+      "topic": "Frontend",
+      "difficulty": "Easy",
+      "tags": ["React", "JS"]
+    },
+    {
+      "_id": "2",
+      "question": "What is useState hook used for?",
+      "options": [
+        "To make HTTP requests",
+        "To add local state to a functional component",
+        "To route between pages",
+        "To write CSS styles inside JavaScript"
+      ],
+      "correctAnswer": "To add local state to a functional component",
+      "topic": "React Hooks",
+      "difficulty": "Medium",
+      "tags": ["State", "Hooks"]
+    },
+    {
+      "_id": "3",
+      "question": "Explain Event Loop in JavaScript",
+      "options": [
+        "A loop that iterates over array elements synchronously",
+        "A component that renders UI elements recursively",
+        "A mechanism that handles asynchronous callbacks and single-threaded execution",
+        "A built-in method for sorting object keys"
+      ],
+      "correctAnswer": "A mechanism that handles asynchronous callbacks and single-threaded execution",
+      "topic": "JavaScript",
+      "difficulty": "Hard",
+      "tags": ["Async", "JS"]
+    },
+    {
+      "_id": "4",
+      "question": "What is the this keyword?",
+      "options": [
+        "A variable used to store global application state",
+        "Refers to the object that is executing the current function",
+        "A function used to import external modules",
+        "A reserved word used strictly for loops"
+      ],
+      "correctAnswer": "Refers to the object that is executing the current function",
+      "topic": "JavaScript",
+      "difficulty": "Medium",
+      "tags": ["functions", "context"]
+    },
+    {
+      "_id": "5",
+      "question": "Which method is used to merge arrays?",
+      "options": [
+        "concat()",
+        "push()",
+        "join()",
+        "slice()"
+      ],
+      "correctAnswer": "concat()",
+      "topic": "JavaScript",
+      "difficulty": "Medium",
+      "tags": ["array", "methods"]
+    },
+    {
+      "_id": "6",
+      "question": "What is closure in JavaScript?",
+      "options": [
+        "A function combined with references to its surrounding state (lexical environment)",
+        "A method to close a browser tab programmatically",
+        "A way to terminate a running switch statement",
+        "A feature to clear local storage automatically"
+      ],
+      "correctAnswer": "A function combined with references to its surrounding state (lexical environment)",
+      "topic": "JavaScript",
+      "difficulty": "Medium",
+      "tags": ["functions", "closure"]
+    }
+  ],
+  "quizzes": []
+}
