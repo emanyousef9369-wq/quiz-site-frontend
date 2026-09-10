@@ -23,8 +23,7 @@ function App() {
       {/* Register */}
       <Route path="/SignUp" element={<SignUp />} />
 
-      {/* Home */}
-      <Route path="/home" element={<Home />}/>
+     
 
    
      {/* QuestionBank */}
